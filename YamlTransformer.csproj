@@ -32,13 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet, Version=8.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e">
+      <HintPath>packages\YamlDotNet.8.0.0\lib\net45\YamlDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="interfaces\FieldId.cs" />
+    <Compile Include="interfaces\JGameObject.cs" />
     <Compile Include="interfaces\Rgba.cs" />
     <Compile Include="interfaces\ScriptField.cs" />
     <Compile Include="Scene.cs" />
@@ -48,6 +57,10 @@
     <Compile Include="OcclusionSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RenderSettings.cs" />
+    <Compile Include="Transformator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
